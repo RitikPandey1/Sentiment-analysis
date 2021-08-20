@@ -20,6 +20,7 @@ for i in range(0,1000):
     ps = PorterStemmer()
     stop_words = stopwords.words('english')
     stop_words.remove('not')
+    stop_words.remove('no')
     review = [ps.stem(word) for word in review if not word in set(stop_words)]
     review = ' '.join(review)
     clean_reviews.append(review)
