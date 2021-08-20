@@ -62,3 +62,10 @@ knn.fit(x_train,y_train)
 y_pred2 = knn.predict(x_test)
 print("-- KNN --")
 accuCheck(y_pred2)
+
+from sklearn.ensemble import RandomForestClassifier
+rf = RandomForestClassifier(criterion='entropy',random_state=0)
+rf.fit(x_train,y_train)
+y_pred3 = rf.predict(x_test)
+print("-- random forest --")
+accuCheck(y_pred3)
