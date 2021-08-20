@@ -1,4 +1,5 @@
 from nltk.corpus.reader import ipipan
+from nltk.probability import KneserNeyProbDist
 import numpy as np
 import pandas as pd
 
@@ -55,10 +56,9 @@ y_pred1 = lg.predict(x_test)
 print('-- logistic regression --')
 accuCheck(y_pred1)
 
-
-
-
-
-
-
-
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors=31)
+knn.fit(x_train,y_train)
+y_pred2 = knn.predict(x_test)
+print("-- KNN --")
+accuCheck(y_pred2)
