@@ -1,5 +1,3 @@
-from nltk.corpus.reader import ipipan
-from nltk.probability import KneserNeyProbDist
 import numpy as np
 import pandas as pd
 
